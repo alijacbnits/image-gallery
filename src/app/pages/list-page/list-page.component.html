@@ -1,0 +1,18 @@
+<app-searchbar 
+(onSearch) = "onImageSearch($event)"
+></app-searchbar>
+
+<!-- <div>
+    <button class="prev-button" (click)="setPrevPage()">Prev</button>
+    <button (click)="setNextPage()">Next</button>       
+</div> -->
+
+<h1>API Lists</h1>
+<div style="overflow: scroll;" infiniteScroll (scrolled)="onScroll()">
+    <div *ngFor="let item of data">
+            <app-imgcards 
+            imgUrl = "{{item.largeImageURL}}"
+            ></app-imgcards>
+    </div>
+
+</div>
